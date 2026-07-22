@@ -36,7 +36,25 @@ explorer:** [flashco.app/#patterns](https://flashco.app/#patterns)
 | 8 | [Economics & Lifecycle](./08-economics-and-lifecycle.md) | The company state machine, budget strikes as termination, the BYOK model, and deliberate mortality |
 | 9 | [Roadmap & Known Gaps](./09-roadmap.md) | What is not built yet — published, not hidden |
 
-Each document stands alone; together they describe the complete system.
+## Implementation deep-dives (with code)
+
+The second series goes below the architecture into the running code:
+real, annotated snippets from the production runtime and control plane,
+with the engineering decisions and the bugs they prevent.
+
+| # | Document | What it implements |
+|---|----------|--------------------|
+| 10 | [The Agent Execution Loop](./10-implementing-the-agent-loop.md) | The turn loop: two-stage timeouts, tool dispatch, error-as-context, MCP auto-reconnect, history sanitization |
+| 11 | [Three-Tier Memory](./11-implementing-three-tier-memory.md) | Token budgets, observation masking, episodic facts, safe summarization cut points, prompt assembly |
+| 12 | [The Security Guard](./12-implementing-the-security-guard.md) | Named injection patterns, flag-and-frame wrapping, typed secret redaction, the Rule of Two policy engine |
+| 13 | [Schema-Forced Structured Output](./13-implementing-structured-output.md) | Forced tool calls in TS and Python, schemas as semantics, acyclic-by-construction task graphs |
+| 14 | [The LLM Judge](./14-implementing-the-llm-judge.md) | Trajectory gathering, judge calibration against known biases, weighted scoring, fire-and-forget operation |
+| 15 | [Per-Agent Tool Filtering](./15-implementing-tool-filtering.md) | The three-layer filter, the deny-all sentinel, and keeping two allowlists coherent |
+| 16 | [Budget Strikes & Metering](./16-implementing-budget-strikes.md) | One metering gate, the strike ladder, BYOK branching, top-up as a conservation law |
+
+Each document stands alone; together they describe the complete system —
+the design series (1–9) explains *why*, the implementation series (10–16)
+shows *how*.
 
 ## How this maps to the literature
 
@@ -50,9 +68,10 @@ in the [roadmap](./09-roadmap.md).
 
 ## Reading order
 
-- **Building your own multi-agent system?** Start with 1 → 3 → 4 → 5.
-- **Evaluating agent platforms?** Start with 2 → 6 → 8.
-- **Security review?** 5 → 7 → 1.
+- **Building your own multi-agent system?** Start with 1 → 3 → 4 → 5, then
+  the matching implementation docs 10 → 11 → 12.
+- **Evaluating agent platforms?** Start with 2 → 6 → 8, then 14 → 16.
+- **Security review?** 5 → 7 → 1, then 12 → 15.
 - **Just curious what this is?** [flashco.app](https://flashco.app) first —
   the landing page walks the concepts interactively, then come back here
   for depth.
