@@ -51,9 +51,10 @@ with the engineering decisions and the bugs they prevent.
 | 14 | [The LLM Judge](./14-implementing-the-llm-judge.md) | Trajectory gathering, judge calibration against known biases, weighted scoring, fire-and-forget operation |
 | 15 | [Per-Agent Tool Filtering](./15-implementing-tool-filtering.md) | The three-layer filter, the deny-all sentinel, and keeping two allowlists coherent |
 | 16 | [Budget Strikes & Metering](./16-implementing-budget-strikes.md) | One metering gate, the strike ladder, BYOK branching, top-up as a conservation law |
+| 17 | [Orchestration Modes](./17-orchestration-modes.md) | Four topologies (hub, relay, auction, panel) behind one strategy seam — and how each run is measured |
 
 Each document stands alone; together they describe the complete system —
-the design series (1–9) explains *why*, the implementation series (10–16)
+the design series (1–9) explains *why*, the implementation series (10–17)
 shows *how*.
 
 ## How this maps to the literature
