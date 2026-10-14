@@ -20,6 +20,16 @@ critiqued, and reproduced.
 **Try it:** [flashco.app](https://flashco.app) · **Interactive pattern
 explorer:** [flashco.app/#patterns](https://flashco.app/#patterns)
 
+> **A note on terminology.** These documents use the architecture's
+> internal vocabulary: a ***blueprint*** is the durable, versioned design
+> of an agent team, and a ***company*** is one run of it. The product UI
+> now uses friendlier words for the same two objects: the blueprint is
+> called a **company** (the lasting entity you design, hire from the
+> marketplace, and that accumulates experience), and each run is a
+> **mission** (launched, immutable once started, dissolved, and judged).
+> Read `blueprint → company` and `company → mission` when moving between
+> these docs and the app — the concepts and code are identical.
+
 ---
 
 ## The document series
@@ -52,9 +62,10 @@ with the engineering decisions and the bugs they prevent.
 | 15 | [Per-Agent Tool Filtering](./15-implementing-tool-filtering.md) | The three-layer filter, the deny-all sentinel, and keeping two allowlists coherent |
 | 16 | [Budget Strikes & Metering](./16-implementing-budget-strikes.md) | One metering gate, the strike ladder, BYOK branching, top-up as a conservation law |
 | 17 | [Orchestration Modes](./17-orchestration-modes.md) | Four topologies (hub, relay, auction, panel) behind one strategy seam — and how each run is measured |
+| 18 | [Agent Skills & the Blueprint Experience Loop](./18-agent-skills-and-blueprint-experience.md) | Portable SKILL.md expertise per agent, and the Hermes-style loop that writes each run's lessons back into the blueprint |
 
 Each document stands alone; together they describe the complete system —
-the design series (1–9) explains *why*, the implementation series (10–17)
+the design series (1–9) explains *why*, the implementation series (10–18)
 shows *how*.
 
 ## How this maps to the literature
